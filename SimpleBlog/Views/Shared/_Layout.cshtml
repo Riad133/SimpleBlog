@@ -1,0 +1,24 @@
+﻿@using System.Drawing
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.title - SimpleBlog</title>
+</head>
+<body>
+<header>
+    <h1> <a href="@Url.RouteUrl("home")">Simple Blog</a></h1>
+</header>
+
+@RenderBody();
+
+<footer>
+    &copy; @DateTime.UtcNow.Year -ME;
+</footer>
+ </body>
+</html>
