@@ -28,6 +28,13 @@ namespace SimpleBlog.Controllers
 
         public ActionResult Login (AuthLogin form)
         {
+            if (!ModelState.IsValid)
+                return View(form);
+            if (form.UserName!="Riad" )
+            {
+                ModelState.AddModelError("UserName","User name or password not correct");
+                return View(form);
+            }
             return Content("Hi  there "+form.UserName);
         }
 
